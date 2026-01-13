@@ -1383,3 +1383,52 @@ body {
 .logo--footer .logo__svg rect {
     fill: var(--mustard);
 }
+.ai-core svg {
+    filter: drop-shadow(0 0 15px rgba(197, 146, 30, 0.3));
+}
+/* Фикс логотипа в футере */
+.logo--footer .logo__text {
+    color: var(--white);
+    /* Теперь текст Zektra белый на темном фоне */
+}
+
+.logo--footer .accent {
+    color: var(--mustard);
+}
+
+/* Стили для текстового контента страниц */
+.pages h1 {
+    font-family: var(--font-head);
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 40px;
+    color: var(--dark);
+    line-height: 1.2;
+}
+
+.pages h2 {
+    font-family: var(--font-head);
+    font-size: 24px;
+    margin: 40px 0 20px;
+    color: var(--mustard-dark);
+}
+
+.pages p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--gray);
+    max-width: 800px;
+}
+
+.pages ul {
+    margin: 20px 0 30px 20px;
+    max-width: 800px;
+}
+
+.pages li {
+    margin-bottom: 12px;
+    color: var(--gray);
+}
+
+.pages strong {
+    color: var(--dark);
+}
