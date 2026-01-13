@@ -1,56 +1,510 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/zektra-bit/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zektra Bit — Практики применения ИИ для каждого</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet">
     <script type="module" crossorigin src="/zektra-bit/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/zektra-bit/assets/styles-guStct1H.css">
+    <link rel="stylesheet" crossorigin href="/zektra-bit/assets/styles-DJlQcxfE.css">
   </head>
   <body>
     <header class="header">
-  <div class="container">
+  <div class="container header__container">
+    <a href="/" class="logo">
+      <svg class="logo__svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="8" fill="#C5921E" />
+        <path d="M10 16L14 20L22 12" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <span class="logo__text">Zektra<span class="accent">Bit</span></span>
+    </a>
+
     <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
+      <ul class="nav__list">
+        <li><a href="#hero" class="nav__link">Главная</a></li>
+        <li><a href="#about" class="nav__link">Применение</a></li>
+        <li><a href="#benefits" class="nav__link">Преимущества</a></li>
+        <li><a href="#innovations" class="nav__link">Инновации</a></li>
+        <li><a href="#education" class="nav__link">Обучение</a></li>
       </ul>
     </nav>
+
+    <div class="header__actions">
+      <a href="#contact" class="btn btn--header">Связаться</a>
+      <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </div>
 </header>
 
+<div class="mobile-menu" id="mobileMenu">
+  <ul class="mobile-menu__list">
+    <li><a href="#hero">Главная</a></li>
+    <li><a href="#about">Применение</a></li>
+    <li><a href="#benefits">Преимущества</a></li>
+    <li><a href="#innovations">Инновации</a></li>
+    <li><a href="#education">Обучение</a></li>
+    <li><a href="#contact" class="accent">Запросить доступ</a></li>
+  </ul>
+</div>
 
-    <main>
+    <main id="main-content">
       <!-- Loads the specified .html file -->
-      
+      <section class="hero" id="hero">
+    <div class="hero__bg">
+        <div class="hero__grid"></div>
+    </div>
+
+    <div class="container hero__container">
+        <div class="hero__content">
+            <div class="hero__badge reveal-text">Платформа года 2026</div>
+            <h1 class="hero__title reveal-text">
+                Технологии <span class="accent">нового</span> поколения для вашей жизни
+            </h1>
+            <p class="hero__subtitle reveal-text">
+                AI-инструменты для реальных задач: легко разобраться без опыта. Пошаговый путь к автоматизации рутины,
+                доступный каждому уже сегодня.
+            </p>
+            <div class="hero__btns reveal-text">
+                <a href="#contact" class="btn btn--primary">Начать сейчас</a>
+                <a href="#about" class="btn btn--outline">Узнать детали</a>
+            </div>
+        </div>
+
+        <div class="hero__visual">
+            <div class="ai-core">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="coreGrad" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#C5921E" stop-opacity="0.8" />
+                            <stop offset="100%" stop-color="#C5921E" stop-opacity="0" />
+                        </radialGradient>
+                    </defs>
+                    <circle class="pulse" cx="100%" cy="100%" r="40" fill="url(#coreGrad)" />
+                    <rect class="cube" x="60" y="60" width="80" height="80" rx="15" stroke="#C5921E" stroke-width="2"
+                        fill="none" />
+                    <rect class="cube cube--alt" x="70" y="70" width="60" height="60" rx="10" stroke="#121212"
+                        stroke-width="1" fill="none" />
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about" id="about">
+    <div class="container">
+        <div class="section-head reveal-on-scroll">
+            <span class="section-head__label">О платформе</span>
+            <h2 class="section-head__title">Решения, которые <span class="accent">меняют правила игры</span> для каждого
+            </h2>
+            <p class="section-head__subtitle">Мы переосмыслили подход к развитию, сделав сложные технологии доступными
+                для повседневного использования без специальных навыков.</p>
+        </div>
+
+        <div class="about__grid">
+            <article class="card reveal-on-scroll">
+                <div class="card__icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                </div>
+                <h3 class="card__title">Практики сегодня</h3>
+                <p class="card__text">Технологии, которые работают на вас уже сейчас. Никакой теории — только применимые
+                    алгоритмы для жизни и работы.</p>
+                <div class="card__badge">AI-инструменты</div>
+            </article>
+
+            <article class="card card--featured reveal-on-scroll">
+                <div class="card__icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3 class="card__title">Старт за 2 минуты</h3>
+                <p class="card__text">Легко разобраться без опыта. Пошаговый путь, понятный каждому, обеспечивает
+                    быстрый и лёгкий вход в мир инноваций.</p>
+                <div class="card__badge">Удобная адаптация</div>
+            </article>
+
+            <article class="card reveal-on-scroll">
+                <div class="card__icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3 class="card__title">Цифровой доход</h3>
+                <p class="card__text">Оцените перспективы проекта. Используйте технологии для пассивного дохода и
+                    автоматизации финансовых процессов.</p>
+                <div class="card__badge">Стратегия роста</div>
+            </article>
+        </div>
+    </div>
+</section>
+<section class="benefits" id="benefits">
+    <div class="container">
+        <div class="benefits__wrapper">
+            <div class="benefits__info reveal-on-scroll">
+                <span class="section-head__label">Почему мы</span>
+                <h2 class="section-head__title">Методологии, доказавшие свою <span class="accent">эффективность</span>
+                </h2>
+                <p class="section-head__subtitle">
+                    Платформа уже доступна в Европе. Мы обеспечиваем экспертную поддержку на всех этапах внедрения ИИ в
+                    вашу повседневную жизнь.
+                </p>
+
+                <ul class="benefits__list">
+                    <li class="benefits__item">
+                        <div class="benefits__check">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <span>Предложение активно только в странах ЕС</span>
+                    </li>
+                    <li class="benefits__item">
+                        <div class="benefits__check">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <span>Соответствие стандартам безопасности Германии</span>
+                    </li>
+                </ul>
+
+                <a href="#contact" class="btn btn--outline">Получить больше информации</a>
+            </div>
+
+            <div class="benefits__grid">
+                <div class="benefit-card reveal-on-scroll">
+                    <div class="benefit-card__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="benefit-card__title">Надежность</h4>
+                    <p class="benefit-card__text">Передовая цифровая инфраструктура для защиты ваших данных.</p>
+                </div>
+
+                <div class="benefit-card reveal-on-scroll">
+                    <div class="benefit-card__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h4 class="benefit-card__title">Поддержка</h4>
+                    <p class="benefit-card__text">Экспертная помощь от специалистов из Берлина 24/7.</p>
+                </div>
+
+                <div class="benefit-card reveal-on-scroll">
+                    <div class="benefit-card__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 3 21 3 21 8"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                            <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path>
+                        </svg>
+                    </div>
+                    <h4 class="benefit-card__title">Масштаб</h4>
+                    <p class="benefit-card__text">Решения, которые легко адаптируются под ваши новые цели.</p>
+                </div>
+
+                <div class="benefit-card reveal-on-scroll">
+                    <div class="benefit-card__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h4 class="benefit-card__title">Простота</h4>
+                    <p class="benefit-card__text">Интерфейсы, понятные человеку без технического образования.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="innovations" id="innovations">
+    <div class="container">
+        <div class="innovations__grid">
+            <div class="innovations__content reveal-on-scroll">
+                <span class="section-head__label">Наши технологии</span>
+                <h2 class="section-head__title">Инновации, которые <span class="accent">легко внедрить</span></h2>
+                <p class="section-head__subtitle">
+                    Мы создаем решения, которые меняют правила игры. Платформа года по версии экспертов в области
+                    доступного интеллекта.
+                </p>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-item__value" data-target="95">0</div>
+                        <div class="stat-item__label">Эффективность (%)</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-item__value" data-target="150">0</div>
+                        <div class="stat-item__label">Сэкономлено часов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-item__value" data-target="12">0</div>
+                        <div class="stat-item__label">Стран присутствия</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="innovations__visual reveal-on-scroll">
+                <div class="progress-box">
+                    <div class="progress-box__header">
+                        <span>Анализ данных</span>
+                        <span class="progress-val">88%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="--width: 88%"></div>
+                    </div>
+                </div>
+
+                <div class="progress-box">
+                    <div class="progress-box__header">
+                        <span>Автоматизация</span>
+                        <span class="progress-val">94%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="--width: 94%"></div>
+                    </div>
+                </div>
+
+                <div class="progress-box">
+                    <div class="progress-box__header">
+                        <span>Поддержка пользователей</span>
+                        <span class="progress-val">100%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="--width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="education" id="education">
+    <div class="container">
+        <div class="section-head reveal-on-scroll">
+            <span class="section-head__label">Обучение и гайды</span>
+            <h2 class="section-head__title">Практики, применимые <span class="accent">уже сегодня</span></h2>
+            <p class="section-head__subtitle">Начните использовать AI-инструменты для ежедневных задач. Никакой теории —
+                только пошаговые алгоритмы действий.</p>
+        </div>
+
+        <div class="education__grid">
+            <article class="blog-card reveal-on-scroll">
+                <div class="blog-card__image">
+                    <img src="img/placeholder.png" alt="AI-инструменты">
+                    <span class="blog-card__tag">Быстрый старт</span>
+                </div>
+                <div class="blog-card__body">
+                    <h3 class="blog-card__title">Настройка AI-ассистента за 5 минут</h3>
+                    <p class="blog-card__text">Пошаговый путь, понятный каждому: от регистрации до первого
+                        делегированного задания.</p>
+                    <a href="#" class="blog-card__link">
+                        Узнать детали
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="blog-card reveal-on-scroll">
+                <div class="blog-card__image">
+                    <img src="img/placeholder.png" alt="Планирование бюджета">
+                    <span class="blog-card__tag">Финансы</span>
+                </div>
+                <div class="blog-card__body">
+                    <h3 class="blog-card__title">ИИ для планирования семейного бюджета</h3>
+                    <p class="blog-card__text">Как оптимизировать расходы и создать стратегию роста на базе
+                        инновационных расчетов.</p>
+                    <a href="#" class="blog-card__link">
+                        Узнать детали
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="blog-card reveal-on-scroll">
+                <div class="blog-card__image">
+                    <img src="img/placeholder.png" alt="Карьера">
+                    <span class="blog-card__tag">Карьера</span>
+                </div>
+                <div class="blog-card__body">
+                    <h3 class="blog-card__title">Постройте карьеру, которая работает на вас</h3>
+                    <p class="blog-card__text">Переосмыслите подход к развитию: используйте AI-инструменты для
+                        профессионального роста.</p>
+                    <a href="#" class="blog-card__link">
+                        Узнать детали
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+        </div>
+
+        <div class="education__footer reveal-on-scroll">
+            <p>Хотите получить полный доступ к библиотеке знаний?</p>
+            <a href="#contact" class="btn btn--primary">Запросить доступ</a>
+        </div>
+    </div>
+</section>
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact__grid">
+            <div class="contact__info reveal-on-scroll">
+                <span class="section-head__label">Свяжитесь с нами</span>
+                <h2 class="section-head__title">Готовы <span class="accent">начать сейчас</span>?</h2>
+                <p class="section-head__subtitle">
+                    Оставьте заявку на бесплатную консультацию по всем вопросам. Доступ к платформе открыт для
+                    резидентов Европы.
+                </p>
+
+                <div class="contact__meta">
+                    <p><strong>Адрес:</strong> Kurfürstendamm 213, 10719 Berlin</p>
+                    <p><strong>Email:</strong> support@zektra-bit.blog</p>
+                    <p><strong>Телефон:</strong> +49 30 98765432</p>
+                </div>
+            </div>
+
+            <div class="contact__form-wrapper reveal-on-scroll">
+                <form id="contactForm" class="form">
+                    <div class="form__group">
+                        <label for="name" class="form__label">Ваше имя</label>
+                        <input type="text" id="name" name="name" class="form__input" placeholder="Иван Иванов" required>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="email" class="form__label">Email</label>
+                        <input type="email" id="email" name="email" class="form__input" placeholder="mail@example.com"
+                            required>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="phone" class="form__label">Телефон (только цифры)</label>
+                        <input type="tel" id="phone" name="phone" class="form__input" placeholder="493098765432"
+                            required>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label">Защита от спама: <span id="captchaQuestion"
+                                class="accent"></span></label>
+                        <input type="text" id="captchaInput" class="form__input" placeholder="Ответ" required>
+                    </div>
+
+                    <div class="form__checkbox">
+                        <input type="checkbox" id="consent" required>
+                        <label for="consent">Я согласен с <a href="./privacy.html" class="accent">политикой
+                                конфиденциальности</a></label>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full" id="submitBtn">Отправить запрос</button>
+
+                    <div id="formSuccess" class="form__success">
+                        <div class="form__success-icon">✓</div>
+                        <p>Спасибо! Ваша заявка принята. Мы свяжемся с вами в ближайшее время.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
+  <div class="container footer__grid">
+    <div class="footer__col">
+      <a href="/" class="logo logo--footer">
+        <span class="logo__text">Zektra<span class="accent">Bit</span></span>
       </a>
-    </p>
+      <p class="footer__description">
+        Технологии, которые работают на вас. Переосмыслите подход к развитию с помощью AI-инструментов нового поколения.
+      </p>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Навигация</h4>
+      <ul class="footer__menu">
+        <li><a href="#hero">Главная</a></li>
+        <li><a href="#about">Применение</a></li>
+        <li><a href="#benefits">Преимущества</a></li>
+        <li><a href="#innovations">Инновации</a></li>
+        <li><a href="#education">Обучение</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Документы</h4>
+      <ul class="footer__menu">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookie Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="return.html">Return Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="personal-data-policy.html">Personal Data</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Контакты</h4>
+      <ul class="footer__contacts">
+        <li>
+          <i data-lucide="map-pin"></i>
+          <span>Friedrichstraße 12, 10117 Berlin, Germany</span>
+        </li>
+        <li>
+          <i data-lucide="phone"></i>
+          <a href="tel:+493012345678">+49 30 12345678</a>
+        </li>
+        <li>
+          <i data-lucide="mail"></i>
+          <a href="mailto:hello@zektra-bit.blog">hello@zektra-bit.blog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>&copy; 2026 Zektra Bit. Платформа уже доступна в Европе. Все права защищены.</p>
   </div>
 </footer>
-
-
+<div id="cookiePopup" class="cookie-popup">
+  <div class="cookie-popup__content">
+    <p class="cookie-popup__text">
+      Этот сайт использует cookies для улучшения работы. Подробнее — в нашей
+      <a href="./cookies.html" class="accent">Cookie политике</a>.
+    </p>
+    <button id="acceptCookies" class="btn btn--header">Принять</button>
+  </div>
+</div>
   </body>
 </html>
